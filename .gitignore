@@ -1,0 +1,8 @@
+/node_modules
+test.js
+/test
+*.temp
+*.csv
+mbox
+*.mbox
+*.txt
