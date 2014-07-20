@@ -99,7 +99,10 @@ function cleanData(arrData){
     noNoreply = arrData.replace(/^"(noreply|no-reply)+(@.*)/gm, '');
 
     noStrangeEmail = noNoreply.replace(/((^".*)+(([0-9]{6,}.*)|([A-Z]{4,}.*)))|(^"([A-Z]{2,})([0-9].*)|(^"[0-9]{2,}.*))/gm, '');
-    return  noStrangeEmail;
+    
+    noEmptyLine = noStrangeEmail.replace(/^\s/gm, '');
+    
+    return  noEmptyLine;
 }
 
 //start the prompt
